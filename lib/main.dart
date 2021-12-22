@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bottomtab_transition/bottom_first.dart';
+import 'package:flutter_bottomtab_transition/bottonTabPage.dart';
 import 'package:flutter_bottomtab_transition/secondPage.dart';
 
 void main() {
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
         // This is the theme of your z
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: BottomTabPage(),
       routes: <String, WidgetBuilder>{ // 画面遷移させたいページを挿入
         '/secondPage': (BuildContext context) => SecondPage(),
       },
