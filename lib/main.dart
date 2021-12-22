@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
-      routes: <String, WidgetBuilder>{
+      routes: <String, WidgetBuilder>{ // 画面遷移させたいページを挿入
         '/secondPage': (BuildContext context) => SecondPage(),
       },
     );
@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.close),
-        onPressed: (){
+        onPressed: (){ // 遷移させるページを指定
           Navigator.of(context).pushNamed('/secondPage');
         },
       ),
