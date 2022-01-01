@@ -28,14 +28,26 @@ class _BottomTabPageState extends State<BottomTabPage> {
 
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.add_comment_sharp),
-            title: Text('1')
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.add_comment_sharp,
+                color: hogeColor[NavigationState.firstPage],
+              ),
+              label: hogeString[NavigationState.firstPage]
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.add_location_alt_sharp),
-              title: Text('2')
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.add_location_alt_sharp,
+                color: hogeColor[NavigationState.secondPage],
+              ),
+              label: hogeString[NavigationState.secondPage]
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.help),
-              title: Text('3')
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.help,
+                color: hogeColor[NavigationState.thirdPage],
+              ),
+              label: hogeString[NavigationState.thirdPage]
           ),
         ],
 
@@ -49,3 +61,22 @@ class _BottomTabPageState extends State<BottomTabPage> {
 
   void _onItemTapped(int index) => setState(() => _currentIndex = index );
 }
+
+// ここから下は特に意味はない。マジックナンバーを用いたくなかっただけ
+enum NavigationState{
+  firstPage,
+  secondPage,
+  thirdPage
+}
+
+Map<NavigationState, Color> hogeColor = {
+  NavigationState.firstPage: Colors.red,
+  NavigationState.secondPage: Colors.blue,
+  NavigationState.thirdPage: Colors.yellow
+};
+
+Map<NavigationState, String> hogeString = {
+  NavigationState.firstPage: '1画面',
+  NavigationState.secondPage: '2画面',
+  NavigationState.thirdPage: '3画面'
+};

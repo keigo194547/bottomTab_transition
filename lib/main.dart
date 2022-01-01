@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bottomtab_transition/bottom_first.dart';
 import 'package:flutter_bottomtab_transition/bottonTabPage.dart';
 import 'package:flutter_bottomtab_transition/secondPage.dart';
 
