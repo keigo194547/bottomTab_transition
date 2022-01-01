@@ -15,7 +15,7 @@ class BottomFirst extends StatelessWidget {
         child: Container(
 
           width: mediawidth,
-          height: mediahight/2,
+          height: mediahight,
 
           child: Text('画面遷移しました'),
           color: Colors.redAccent,
